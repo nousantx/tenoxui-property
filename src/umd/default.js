@@ -1,15 +1,5 @@
-/*!
- * @tenoxui/property v1.3.0 (https://github.com/tenoxui/css)
- * Copyright (c) 2024 NOuSantx
- * Licensed under the MIT License (https://github.com/tenoxui/css/blob/main/LICENSE)
- */
-
-interface PropertyMap {
-  [key: string]: string | string[];
-}
-
-const property: PropertyMap = {
-  // Mapping type and its Property
+ const defaultProps = {
+  // padding
   p: "padding",
   pt: "paddingTop",
   pb: "paddingBottom",
@@ -31,7 +21,7 @@ const property: PropertyMap = {
   lh: "lineHeight",
   ls: "letterSpacing",
   ta: "textAlign",
-  tc: "color",
+  c: "color",
   td: "textDecoration",
   ti: "textIndent",
   tn: "textTransform",
@@ -41,7 +31,7 @@ const property: PropertyMap = {
   "font-s": "fontStyle",
   "white-space": "whiteSpace",
   // Positioning
-  position: "position",
+  pn: "position",
   z: "zIndex",
   t: "top",
   b: "bottom",
@@ -58,48 +48,39 @@ const property: PropertyMap = {
   "h-mn": "minHeight",
   // Background
   bg: "background",
-  "bg-color": "backgroundColor",
-  "bg-image": "backgroundImage",
-  "bg-attach": "backgroundAttachment",
-  "bg-origin": "backgroundOrigin",
-  "bg-size": "backgroundSize",
+  "bg-c": "backgroundColor",
+  "bg-i": "backgroundImage",
+  "bg-a": "backgroundAttachment",
+  "bg-or": "backgroundOrigin",
+  "bg-s": "backgroundSize",
+  "bg-r": "backgroundRepeat",
+  "bg-p": "backgroundPosition",
   "bg-clip": "backgroundClip",
-  "bg-repeat": "backgroundRepeat",
-  "bg-loc": "backgroundPosition",
   // Flex
-  fd: "flexDirection",
-  flex: "flex",
-  "flex-wrap": "flexWrap",
-  "flex-basis": "flexBasis",
-  "flex-grow": "flexGrow",
-  "flex-shrink": "flexShrink",
-  order: "order",
+  fx: "flex",
+  "fx-d": "flexDirection",
+  "fx-w": "flexWrap",
+  "fx-b": "flexBasis",
+  "fx-g": "flexGrow",
+  "fx-s": "flexShrink",
   // Gap
-  gap: "gap",
+  g: "gap",
+  "g-y": "columnGap",
+  "g-x": "rowGap",
   // Align
-  ac: "alignContent",
-  ai: "align-items",
+  "a-i": "alignItems",
   // Justify
-  jc: "justifyContent",
-  ji: "justifyItems",
-  // Filter
-  filter: "filter",
-  // Backdrop Filter
-  backdrop: "backdropFilter",
+  "j-c": "justifyContent",
   // Border
   border: "border",
   bc: "borderColor",
   br: "borderRadius",
   bs: "borderStyle",
   bw: "borderWidth",
-  "bw-left": "borderLeftWidth",
-  "bw-right": "borderRightWidth",
-  "bw-top": "borderTopWidth",
-  "bw-bottom": "borderBottomWidth",
-  "radius-top": ["borderTopLeftRadius", "borderTopRightRadius"],
-  "radius-bottom": ["borderBottomLeftRadius", "borderBottomRightRadius"],
-  "radius-left": ["borderTopLeftRadius", "borderBottomLeftRadius"],
-  "radius-right": ["borderTopRightRadius", "borderBottomRightRadius"],
+  "bw-l": "borderLeftWidth",
+  "bw-r": "borderRightWidth",
+  "bw-t": "borderTopWidth",
+  "bw-b": "borderBottomWidth",
   // Cursor
   cursor: "cursor",
   // Overflow
@@ -114,16 +95,9 @@ const property: PropertyMap = {
   "tr-prop": "transitionProperty",
   "tr-timing": "transitionTimingFunction",
   "tr-delay": "transitionDelay",
-  // Transform
-  transform: "transform",
   // More
-  opa: "opacity",
-  rt: "rotate",
-  scale: "scale",
+  shadow: "boxShadow",
   // custom property
   box: ["width", "height"],
-  "flex-parent": ["justifyContent", "alignItems"]
+  "fx-parent": ["justifyContent", "alignItems"]
 };
-
-
-export default property;
